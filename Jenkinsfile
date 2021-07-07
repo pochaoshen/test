@@ -1,6 +1,6 @@
 podTemplate(
     name: "pod template",
-    containers: [containerTemplate(name: 'ctn', image: 'jenkins/inbound-agent', ttyEnabled: true, command: 'cat')],
+    containers: [containerTemplate(name: 'ctn', image: 'jenkins/inbound-agent:4.9-1-jdk11-nanoserver-1809', ttyEnabled: true, command: 'cat')],
 ) {
     node("test") {
         stage("1") {
