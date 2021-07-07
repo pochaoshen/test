@@ -16,11 +16,5 @@ podTemplate(
                 sh "echo stage 1"
             }
         }
-        
-        stage("2") {
-            container("ctn") {
-                sh "echo stage 2"
-            }
-        }
     }
 }
