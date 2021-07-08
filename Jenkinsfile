@@ -2,7 +2,7 @@ podTemplate(
     label: "my-label",
     name: "pod template",
     namespace: "cicd",
-    containers: [containerTemplate(name: 'jnlp', image: 'jenkins/jnlp-slave:4.9-1-jdk11', ttyEnabled: true, command: 'cat')],
+    containers: [containerTemplate(name: 'jnlp', image: 'jenkins/jnlp-slave:4.9-1-jdk11', ttyEnabled: true, command: '/usr/local/bin/jenkins-slave')],
     volumes: [
         hostPathVolume(
             mountPath: '/var/run/docker.sock',
